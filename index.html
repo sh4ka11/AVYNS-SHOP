@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVYN'S SHOP | Moda que te representa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="authView" class="auth-view">
+    <div class="auth-art">
+      <div class="auth-brand" aria-label="AVYN'S SHOP">
+        <span>ESTILO CON ACTITUD</span>
+        <strong>AVYN'S</strong>
+        <b>SHOP</b>
+      </div>
+      <div class="art-copy">
+        <p class="eyebrow">TU ESTILO, TU REGLA</p>
+        <h1>Viste lo que<br><em>imaginas.</em></h1>
+        <p>Prendas pensadas para cada versión de ti.</p>
+      </div>
+    </div>
+    <main class="auth-panel">
+      <div class="auth-heading">
+        <h2>Tu armario empieza aquí</h2>
+        <p>Crea una cuenta para explorar toda la colección.</p>
+      </div>
+      <form id="authForm" class="auth-form">
+        <label>Nombre completo<input id="nameInput" type="text" placeholder="Tu nombre" required></label>
+        <label>Correo electrónico<input id="emailInput" type="email" placeholder="nombre@correo.com" required></label>
+        <label>Contraseña<input type="password" placeholder="Mínimo 6 caracteres" minlength="6" required></label>
+        <button class="primary-button" type="submit">Crear mi cuenta <span>→</span></button>
+      </form>
+      <p class="auth-note">Al continuar aceptas nuestros términos de uso.</p>
+    </main>
+  </div>
+
+  <div id="shopView" class="shop-view hidden">
+    <header class="topbar">
+      <a class="logo" href="#inicio"><img src="LOGO/image.png" alt="AVYN'S SHOP"></a>
+      <nav class="main-nav" aria-label="Categorías">
+        <button class="nav-link active" data-category="all">Todo</button>
+        <button class="nav-link" data-category="women">Mujer</button>
+        <button class="nav-link" data-category="men">Hombre</button>
+        <button class="nav-link" data-category="teens">Adolescentes</button>
+      </nav>
+      <div class="header-actions">
+        <span id="welcomeUser" class="welcome-user"></span>
+        <button id="logoutButton" class="icon-button" aria-label="Cerrar sesión" title="Cerrar sesión">↗</button>
+        <button id="cartButton" class="cart-button" aria-label="Abrir carrito">Carrito <b id="cartCount">0</b></button>
+      </div>
+    </header>
+
+    <main id="inicio">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">NUEVA COLECCIÓN / 2026</p>
+          <h1>Tu estilo no<br>necesita <em>permiso.</em></h1>
+          <p>Descubre básicos con carácter para todos tus días.</p>
+          <button class="outline-button" id="exploreButton">Explorar prendas <span>↓</span></button>
+        </div>
+        <div class="hero-stat"><strong>18</strong><span>prendas<br>seleccionadas</span></div>
+      </section>
+
+      <section class="catalog-section" id="catalogo">
+        <div class="catalog-head">
+          <div><p class="eyebrow">SELECCIÓN AVYN'S</p><h2>Encuentra tu próxima favorita</h2></div>
+          <div class="catalog-tools">
+            <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar prendas..."></label>
+            <select id="sortSelect" aria-label="Ordenar productos"><option value="featured">Destacados</option><option value="low">Precio menor</option><option value="high">Precio mayor</option></select>
+          </div>
+        </div>
+        <div class="filter-row" id="filterRow">
+          <button class="filter-chip active" data-category="all">Todas</button><button class="filter-chip" data-category="women">Mujer</button><button class="filter-chip" data-category="men">Hombre</button><button class="filter-chip" data-category="teens">Adolescentes</button>
+        </div>
+        <div id="productGrid" class="product-grid"></div>
+        <p id="emptyState" class="empty-state hidden">No encontramos prendas con esa búsqueda.</p>
+      </section>
+    </main>
+
+    <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+      <div class="drawer-head"><div><p class="eyebrow">TU SELECCIÓN</p><h2>Carrito</h2></div><button id="closeCart" class="close-button" aria-label="Cerrar carrito">×</button></div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer"><div><span>Total</span><strong id="cartTotal">$0</strong></div><button id="checkoutButton" class="primary-button">Continuar compra <span>→</span></button></div>
+    </aside>
+    <div id="drawerBackdrop" class="drawer-backdrop"></div>
+    <div id="toast" class="toast"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
