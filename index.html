@@ -41,11 +41,8 @@
   <div id="shopView" class="shop-view hidden">
     <header class="topbar">
       <a class="logo" href="#inicio"><img src="LOGO/image.png" alt="AVYN'S SHOP"></a>
-      <nav class="main-nav" aria-label="Categorías">
-        <button class="nav-link active" data-category="all">Todo</button>
-        <button class="nav-link" data-category="women">Mujer</button>
-        <button class="nav-link" data-category="men">Hombre</button>
-        <button class="nav-link" data-category="teens">Adolescentes</button>
+      <nav class="main-nav" aria-label="Información de la tienda">
+        <button id="aboutButton" class="about-link" type="button">Quiénes somos <span>↗</span></button>
       </nav>
       <div class="header-actions">
         <span id="welcomeUser" class="welcome-user"></span>
@@ -87,6 +84,21 @@
       <div class="cart-footer"><div><span>Total</span><strong id="cartTotal">$0</strong></div><button id="checkoutButton" class="primary-button">Continuar compra <span>→</span></button></div>
     </aside>
     <div id="drawerBackdrop" class="drawer-backdrop"></div>
+    <section id="aboutModal" class="about-modal" aria-hidden="true" role="dialog" aria-labelledby="aboutTitle">
+      <div class="about-card">
+        <button id="closeAbout" class="close-button" aria-label="Cerrar quiénes somos">×</button>
+        <p class="eyebrow">CONOCE AVYN'S</p>
+        <h2 id="aboutTitle">Moda para<br><em>sentirte tú.</em></h2>
+        <div class="about-rule"></div>
+        <p>¡Hola! somos una comunidad llamada AVYN'S SHOP que quiere ofrecerte ropa muy linda para mujeres, hombres y adolescentes, para que encuentres tu estilo desde la comodidad de tu casa, con una atención super rápida y amable.</p>
+        <p>Buscando que la moda sea una experiencia divertida y sin enredos <span class="sparkle">✦</span></p>
+        <div class="about-sections">
+          <div><h3>Misión</h3><p>Nuestra misión es hacer que comprar ropa online sea tan fácil y agradable como pasar una tarde en tu tienda favorita del barrio. Queremos que encuentres prendas que hagan sentir bien a las personas, sin frustraciones con las tallas ni demoras raras.</p></div>
+          <div><h3>Visión</h3><p>AVYN'S SHOP sueña con convertirse en esa tienda virtual que recomiendan los amigos porque “la atención es increíble” y “los envíos llegan antes de lo pensado”. En el 2028 nos vemos como un referente de moda accesible y sostenible en el país.</p></div>
+        </div>
+        <span class="about-signature">AVYN'S SHOP</span>
+      </div>
+    </section>
     <div id="toast" class="toast"></div>
   </div>
   <script src="script.js"></script>
